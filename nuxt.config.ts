@@ -39,6 +39,11 @@ export default defineNuxtConfig({
   // Configuração Supabase
   supabase: {
     redirect: false,
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      exclude: ['/login'],
+    }
   },
 
   // Configuração Pinia
